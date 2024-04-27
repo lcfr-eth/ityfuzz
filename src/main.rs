@@ -1,4 +1,4 @@
-extern crate core;
+//extern crate core;
 
 use ityfuzz::logger;
 
