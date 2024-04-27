@@ -5,6 +5,7 @@
 
 extern crate core;
 
+/*
 pub mod cache;
 pub mod r#const;
 pub mod evm;
@@ -24,12 +25,17 @@ pub mod scheduler;
 pub mod state;
 pub mod state_input;
 pub mod tracer;
+*/
+
+use ityfuzz::logger;
 
 #[cfg(feature = "sui_support")]
 pub mod r#move;
 
 use clap::{Parser, Subcommand};
-use evm::{evm_main, EvmArgs};
+// use evm::{evm_main, EvmArgs};
+
+use ityfuzz::evm::{evm_main, EvmArgs};
 
 #[cfg(feature = "sui_support")]
 use crate::r#move::{move_main, MoveArgs};
